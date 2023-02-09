@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    background: url('./images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--violet);
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+}
+
+.logo {
+    margin-bottom: 70px;
+    width: 160px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+img {
+    width: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex div {
+    flex: 1;
+}
+
+.text-content {
+    color: #FFF;
+    margin-left: 40px;
+}
+.text-content p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin: 30px 0 20px 0;
+}
+.text-content button {
+    border: none;
+    outline: none;
+    padding: 15px 80px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--violet);
+    border-radius: 50px;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.37);
+}
+.text-content button:hover {
+    color: #FFF;
+    background: var(--soft-magenta);
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media li {
+    list-style: none;
+}
+.social-media li a {
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+}
+.social-media li:nth-child(2) a {
+    margin: 0 20px;
+}
+.social-media li a:hover,
+.social-media li a:active {
+    color: magenta;
+    border-color: magenta;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: lightgray;
+    border-radius: 50px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    body {
+        padding: 0 30px;
+    }
+    .container {
+        width: 400px;
+        margin: 40px auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .text-content {
+        text-align: center;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .text-content p {
+        font-size: .9rem;
+    }
+
+    .text-content button {
+        width: 65%;
+        font-size: 0.95rem;
+        padding: 15px 55px;
+    }
+
+    .social-media {
+        justify-content: center;
+        margin: 60px 0 15px 0;
+    }
+}
